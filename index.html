@@ -10,15 +10,32 @@
     <title>Library</title>
 </head>
 <body>
-    
     <nav>
         <div class="header-text">library</div>
+        <button class="add-book-btn">+</button>
     </nav>
-
     <div class="main">
-        <button class="add-book-btn">Add book</button>
+        <div class="cards">
+        </div>
     </div>
 
+    <section class="modal hidden">
+        <div class="modal-container">
+            <input class="close-modal-btn" type="image" src="img/window-close.svg">
+            <p class="modal-header">Add new book</p>
+            <form class="modal-form" id="my-form">
+                <input class="form-input" type="text" id="title" name="title" placeholder="Title" maxlength="30" required>
+                <input class="form-input" type="text" id="author" name="author" placeholder="Author" maxlength="30" required>
+                <input class="form-input" type="number" id="pages" name="pages" placeholder="Pages" required min="0" max="10000">
+                <div class="read-container">
+                    <input type="checkbox" id="read" name="read">
+                    <label class="form-label" for="read">Read?</label>
+                </div>
+                <input class="submit-btn" type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+    <div class="overlay hidden"></div>
 
     <script src="script.js"></script>
 </body>
